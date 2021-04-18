@@ -1,0 +1,65 @@
+﻿@model List<Asgn02.Models.DataModel>
+@{
+    Layout = "";
+}
+
+<html>
+
+<head>
+    <title>View Data</title>
+    <style>
+
+        .container {
+            background-color: white;
+            margin-left: 2%;
+            margin-top: 2%;
+            width: 96%;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="header">Quotes Data</h1>
+
+        <table>
+            <tr>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Popularity</th>
+                <th>Quote</th>
+            </tr>
+
+            @foreach (Asgn02.Models.DataModel m in Model)
+            {
+                <tr>
+                    <td>@m.Author</td>
+                    <td>@m.Category</td>
+                    <td>@m.Popularity</td>
+                    <td>@m.Quote</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

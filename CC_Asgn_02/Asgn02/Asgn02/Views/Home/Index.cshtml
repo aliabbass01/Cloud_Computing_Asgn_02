@@ -1,0 +1,66 @@
+﻿@{
+    Layout = "";
+}
+
+<html>
+<head>
+    <title> user login form </title>
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+
+    <style type="text/css">
+        body {
+            background-color: white;
+        }
+
+        .container {
+            background-color: white;
+            margin-left: 25%;
+            margin-top: 10%;
+            width: 50%;
+        }
+
+        .setboxmargin {
+            margin-left: 100px;
+            margin-right: 100px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .centerbutton {
+            margin-left: 20%;
+            margin-right: 20%;
+            width: 60%;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h1 class="header">Assignment 02</h1>
+        <br />
+        <br />
+        <hr />
+        <div class="row">
+            <div class="setboxmargin">
+                <button type="submit" onclick="location.href='@Url.Action("Load", "Home")'" class="btn btn-primary centerbutton">Load Data</button>
+                <br /><br /><br />
+                <button type="submit" onclick="location.href='@Url.Action("ViewData", "Home")'" class="btn btn-primary centerbutton">View Data</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
